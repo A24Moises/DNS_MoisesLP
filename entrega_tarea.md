@@ -1,6 +1,7 @@
 ## Instalar el servidor BIND9 en el equipo `darthvader`
 
 - comando `dig @localhost xunta.gal`
+
 ![Captura](./capturas/Captura%20de%20ecrã%20de%202026-09-15%2010-21-36.png)
 
 ## Configurar el servidor BIND9 en el equipo `mandalorian` para que entregue como reenviador a `darthvader`
@@ -15,6 +16,7 @@
         };
 
 - comando `dig @localhost santiagodecompostela.gal.`        
+
 ![Captura](./capturas/2026-10-06_14-12.png)
 
 ## Contenido de archivo de zona de resolución directa `db.starwars.lan`
