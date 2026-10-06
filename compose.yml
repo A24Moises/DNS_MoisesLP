@@ -8,8 +8,6 @@ services:
         ipv4_address: 192.168.20.9
     volumes:
       - ./mandalorian/named.conf.options:/etc/bind/named.conf.options
-      - ./mandalorian/named.conf.local:/etc/bind/named.conf.local
-      - ./mandalorian/zonas/db.starwars.lan:/etc/bind/db.starwars.lan
 
   darthvader:
     build: dnsserver
@@ -21,6 +19,7 @@ services:
       - ./darthvader/named.conf.options:/etc/bind/named.conf.options
       - ./darthvader/named.conf.local:/etc/bind/named.conf.local
       - ./darthvader/zonas/db.starwars.lan:/etc/bind/db.starwars.lan
+      - ./darthvader/zonas/db.192:/etc/bind/db.192
 
   cliente:
     build: cliente

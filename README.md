@@ -26,7 +26,10 @@ Instala unha zona primaria de resolución directa chamada "starwars.lan" e engad
 - TIPO NS con darthsidious
 
 Pega no documento de entrega o contido do arquivo de zona, e do arquivo `/etc/bind/named.conf.local`
-Instala unha zona de resolución inversa que teña que ver co enderezo do equipo darthvader, e engade rexistros PTR para os rexistros tipo A do exercicio anterior. Pega no documento de entrega o contido do arquivo de zona, e do arquivo `/etc/bind/named.conf.local`
+
+Instala unha zona de resolución inversa que teña que ver co enderezo do equipo darthvader, e engade rexistros PTR para os rexistros tipo A do exercicio anterior. 
+
+Pega no documento de entrega o contido do arquivo de zona, e do arquivo `/etc/bind/named.conf.local`
 
 Comproba que podes resolver os distintos rexistros de recursos. Pega no documento de entrega a saída dos comandos:
 nslookup darthvader.starwars.lan localhost
