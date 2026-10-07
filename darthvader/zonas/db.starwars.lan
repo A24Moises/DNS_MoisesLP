@@ -8,9 +8,9 @@ $TTL    86400
 
 @               IN      NS      darthvader.starwars.lan.
 @               IN      NS      darthsidious.starwars.lan.
-@               IN      TXT     "Que a forza te acompanhe"
+lenda           IN      TXT     "Que a forza te acompanhe"
 @               IN      MX      10 c3po.starwars.lan.
-@               IN      A       starwars.lan
+@               IN      A       192.168.20.10
 darthvader      IN      A       192.168.20.10
 skywalker       IN      A       192.168.20.101
 skywalker       IN      A       192.168.20.111

@@ -16,7 +16,6 @@ services:
       rededns:
         ipv4_address: 192.168.20.10
     volumes:
-      - ./darthvader/named.conf.options:/etc/bind/named.conf.options
       - ./darthvader/named.conf.local:/etc/bind/named.conf.local
       - ./darthvader/zonas/db.starwars.lan:/etc/bind/db.starwars.lan
       - ./darthvader/zonas/db.192:/etc/bind/db.192

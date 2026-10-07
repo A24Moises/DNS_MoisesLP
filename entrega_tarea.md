@@ -142,8 +142,12 @@
                 minimum = 86400
 
 - nslookup -q=txt lenda.starwars.lan localhost
+        
+        Server:         localhost
+        Address:        127.0.0.1#53
 
-------
+        lenda.starwars.lan      text = "Que a forza te acompanhe"
+
 
 - nslookup 192.168.20.11 localhost
 
