@@ -6,7 +6,7 @@
 
 ## Configurar el servidor BIND9 en el equipo `mandalorian` para que entregue como reenviador a `darthvader`
 
-- Contenido de named.conf.options
+- Contenido de `named.conf.options`
 
         options {
 	        directory "/var/cache/bind";
@@ -44,7 +44,7 @@
         c3po            IN      A       192.168.20.26
         palpatine       IN      CNAME   darthsidious.starwars.lan.
 
-## Contenido de archivo `/etc/bind/named.conf.local`
+## Contenido de archivo `named.conf.local`
 
         zone "starwars.lan" {
                 type primary;
