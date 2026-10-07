@@ -85,7 +85,7 @@
 
 ## Resultado de los comandos:
 
-- nslookup darthvader.starwars.lan localhost
+- `nslookup darthvader.starwars.lan localhost`
 
         Server:         localhost
         Address:        127.0.0.1#53
@@ -93,7 +93,7 @@
         Name:   darthvader.starwars.lan
         Address: 192.168.20.10
 
-- nslookup skywalker.starwars.lan localhost
+- `nslookup skywalker.starwars.lan localhost`
 
         Server:         localhost
         Address:        127.0.0.1#53
@@ -103,7 +103,7 @@
         Name:   skywalker.starwars.lan
         Address: 192.168.20.101
 
-- nslookup starwars.lan localhost
+- `nslookup starwars.lan localhost`
 
         ;; Got SERVFAIL reply from 127.0.0.1, trying next server
         ;; Got SERVFAIL reply from 127.0.0.1
@@ -112,14 +112,14 @@
 
         ** server can't find starwars.lan: SERVFAIL
 
-- nslookup -q=mx starwars.lan localhost
+- `nslookup -q=mx starwars.lan localhost`
 
         Server:         localhost
         Address:        127.0.0.1#53
 
         starwars.lan    mail exchanger = 10 c3po.starwars.lan.
 
-- nslookup -q=ns starwars.lan localhost
+- `nslookup -q=ns starwars.lan localhost`
 
         Server:         localhost
         Address:        127.0.0.1#53
@@ -127,7 +127,7 @@
         starwars.lan    nameserver = darthvader.starwars.lan.
         starwars.lan    nameserver = darthsidious.starwars.lan.
 
-- nslookup -q=soa starwars.lan localhost
+- `nslookup -q=soa starwars.lan localhost`
 
         Server:         localhost
         Address:        127.0.0.1#53
@@ -141,7 +141,7 @@
                 expire = 1209600
                 minimum = 86400
 
-- nslookup -q=txt lenda.starwars.lan localhost
+- `nslookup -q=txt lenda.starwars.lan localhost`
         
         Server:         localhost
         Address:        127.0.0.1#53
@@ -149,9 +149,10 @@
         lenda.starwars.lan      text = "Que a forza te acompanhe"
 
 
-- nslookup 192.168.20.11 localhost
+- `nslookup 192.168.20.11 localhost`
 
         11.20.168.192.in-addr.arpa      name = darthsidious.starwars.lan.
 
 ## Enlace de repositorio de GitHub
-
+        
+[DNS_MoisesLP](https://github.com/A24Moises/DNS_MoisesLP)
