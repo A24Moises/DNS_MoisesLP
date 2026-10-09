@@ -12,6 +12,8 @@ services:
   darthvader:
     build: dnsserver
     hostname: darthvader
+    depends_on:
+      - mandalorian
     networks:
       rededns:
         ipv4_address: 192.168.20.10
@@ -20,9 +22,22 @@ services:
       - ./darthvader/zonas/db.starwars.lan:/etc/bind/db.starwars.lan
       - ./darthvader/zonas/db.192:/etc/bind/db.192
 
+  darthsidious:
+    build: dnsserver
+    hostname: darthsidious
+    depends_on:
+      - mandalorian
+      - darthvader
+    networks:
+      rededns:
+        ipv4_address: 192.168.20.11
+    volumes:
+    - ./darthsidious/named.conf.local:/etc/bind/named.conf.local
   cliente:
     build: cliente
     hostname: cliente1
+    depends_on:
+      - darthvader
     networks:
       rededns:
         ipv4_address: 192.168.20.110
