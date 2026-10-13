@@ -225,8 +225,8 @@ Repite as capturas e vídeos do punto 2, engadindo o rexistro r2d2 (192.168.20.2
 ### Cambios en el fichero named.conf.local en darthvader
 ![Captura11](./capturas/2026-10-13_13-40.png)
 
-### Logs de transferencias de llaves en darthvader
-![Captura12](./capturas/2026-10-13_13-00.png)
-
 ###  Logs de transferencias de llaves en darthsidious
-![Captura13](./capturas/2026-10-13_13-44.png)
+![Captura12](./capturas/2026-10-13_13-44.png)
+
+### Logs de transferencias de llaves en darthvader
+![Captura13](./capturas/2026-10-13_13-00.png)
