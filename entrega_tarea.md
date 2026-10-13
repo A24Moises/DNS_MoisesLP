@@ -156,3 +156,77 @@
 ## Enlace de repositorio de GitHub
         
 [DNS_MoisesLP](https://github.com/A24Moises/DNS_MoisesLP)
+
+-------------------------------------
+-------------------------------------
+
+# 1.3 Instalación de zonas secundarias.
+
+Partindo da tarefa 1.1, engadiremos un servidor DNS secundario con BIND9 nunha máquina Debian
+
+1. Tomaremos a máquina darthsidious, e configuraremola para ser servidor secundario, tanto da zona primaria de resolución directa como de resolución inversa. 
+Captura os ficheiros de configuración en ambalas dúas máquinas. Fai unha captura onde se vexa o reinicio da máquina darthsidious, no que se vexa no log dos dous equipos e que se fixo a transferencia de zona.
+
+### Fichero de zona en sevidor secundario:
+
+![Captura1](./capturas/2026-10-13_11-32.png)
+
+### Fichero de zona en sevidor primario:
+
+![Captura2](./capturas/2026-10-13_11-35.png)
+
+### Logs de transferencia de zona:
+
+![Captura3](./capturas/2026-10-13_11-43.png)
+   
+2. Engade un rexistro tipo A (Chewbacca 192.168.20.28) na zona de resolución directa e tamén na de resolución inversa.  
+Fai unha captura no momento do reinicio do equipo darthvader, no que se vexa o log dos dous equipos e que se amose que se fixo a transferencia de zona. Adxunta tamén unha captura do ficheiro de zona no servidor secundario.
+
+### Reinicio del equipo darthvader
+![Captura4](./capturas/2026-10-13_13-26.png)
+
+### cheevacca añadido y serial aumentado en db.starwars.lan
+![Captura5](./capturas/2026-10-13_11-45.png)
+
+### cheevacca añadido y serial aumentado en db.192
+![Captura6](./capturas/2026-10-13_12-04.png)
+
+### Transferencia completa
+![Captura7](./capturas/2026-10-13_12-36.png)
+
+
+3. Comproba que o servidor secundario pode resolver ese nome.
+
+        nslookup 192.168.20.11 localhost
+        28.20.168.192.in-addr.arpa      name = chewbacca.starwars.lan.
+
+4. Fai os cambios necesarios para que as trasferencias se fagan de forma segura empregando chaves.  
+Repite as capturas e vídeos do punto 2, engadindo o rexistro r2d2 (192.168.20.29)
+
+### r2d2 añadido y serial aumentado en db.starwars.lan
+![Captura8](./capturas/2026-10-13_13-17.png)
+
+### r2d2 añadido y serial aumentado en db.192
+![Captura9](./capturas/2026-10-13_13-15.png)
+
+### Resolucion de nombre r2d2
+        nslookup 192.168.20.29 localhost
+        29.20.168.192.in-addr.arpa      name = r2d2.starwars.lan.
+
+### Creación de la llave
+        key "chave-starwars" {
+                algorithm hmac-sha256;
+                secret "TOJ/IzS9Jjrm3sy4e9DvHvKGwDEbVU18L3tLv/HR6T8=";
+        }; 
+
+### Cambios en el fichero named.conf.local en darthsidious
+![Captura10](./capturas/2026-10-13_13-31.png)
+
+### Cambios en el fichero named.conf.local en darthvader
+![Captura11](./capturas/2026-10-13_13-40.png)
+
+### Logs de transferencias de llaves en darthvader
+![Captura12](./capturas/2026-10-13_13-00.png)
+
+###  Logs de transferencias de llaves en darthsidious
+![Captura13](./capturas/2026-10-13_13-44.png)
